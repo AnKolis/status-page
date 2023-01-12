@@ -159,28 +159,37 @@ main>div{
 	color: grey;
 }
 
+.bigcontent>p{
+	font-size: 22px;
+}
+
 .temp-img{
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
     justify-content: center;
+    margin-top: 30px;
 }
 
 .temp-img>div{
+	font-size: 18px;
+}
+
+
+.temp-img>div>p{
     width: 140px;
     height: 140px;
     border-radius: 50%;
     border: 10px solid orange;
     background: transparent;
-    margin: 50px 10px;
+    margin: 10px 10px 20px 10px;
     box-shadow: 10px 10px 10px 0 grey inset;
     text-align: center;
     font-size: 30px;
+    line-height: 140px;
 }
 
-.temp-img>div>p{
-	margin-top: 40%;
-}
+
 
 .header>a{
 	background: url(images/css_sprites.png) -65px -0;
