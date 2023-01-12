@@ -8,7 +8,7 @@
 </head>
 <body>
 	<header>
-		<img src="images/logo.svg" alt="DEV.PRO logotype">
+		<img src="images/logo.svg" alt="DEV.PRO">
 		<h1>Office Status Page</h1>
 	</header>
 	<main>
@@ -24,8 +24,8 @@
 						<img src="images/wifi-gr-s.png" alt="wifi green">
 					</div>
 					<p>24&deg;C</p>
-					<a href="#"></a>
-				</div>	
+					<a class="href_toggle" href="#"></a>
+				</div>
 				<a href="#"></a>
 			</div>
 			<div class="bigcontent">
@@ -43,7 +43,7 @@
 							<h3>Power on city</h3>
 							<p>from 10:12 01-12-2022</p>
 						</div>
-					</div>	
+					</div>
 				</div>
 				<p>Temperature scales</p>
 				<div class="temp-img">
@@ -60,7 +60,6 @@
 						<p>22&deg;C</p>
 					</div>
 				</div>
-
 			</div>
 		</div>
 
@@ -68,15 +67,15 @@
 
 		<div class="city">
 			<div class="city-header">
-				<p>Office Kyiv </p>
+				<p>Office Lviv </p>
 				<div class="content">
 					<div>
 						<img src="images/green-energy-s.png" alt="electric green">
 						<img src="images/wifi-gr-s.png" alt="wifi green">
 					</div>
 					<p>24&deg;C</p>
-					<a href="#"></a>
-				</div>	
+					<a class="href_toggle" href="#"></a>
+				</div>
 				<a href="#"></a>
 			</div>
 			<div class="bigcontent">
@@ -94,7 +93,7 @@
 							<h3>Power on city</h3>
 							<p>from 10:12 01-12-2022</p>
 						</div>
-					</div>	
+					</div>
 				</div>
 				<p>Temperature scales</p>
 				<div class="temp-img">
@@ -111,7 +110,6 @@
 						<p>22&deg;C</p>
 					</div>
 				</div>
-
 			</div>
 		</div>
 
@@ -119,15 +117,15 @@
 
 		<div class="city">
 			<div class="city-header">
-				<p>Office Cherkasy </p>
+				<p>Office Lviv </p>
 				<div class="content">
 					<div>
 						<img src="images/red-energy-s.png" alt="electric red">
 						<img src="images/wifi-red-s.png" alt="wifi red">
 					</div>
 					<p>24&deg;C</p>
-					<a href="#"></a>
-				</div>	
+					<a class="href_toggle" href="#"></a>
+				</div>
 				<a href="#"></a>
 			</div>
 			<div class="bigcontent">
@@ -145,7 +143,7 @@
 							<h3>Power on city</h3>
 							<p>from 10:12 01-12-2022</p>
 						</div>
-					</div>	
+					</div>
 				</div>
 				<p>Temperature scales</p>
 				<div class="temp-img">
@@ -162,7 +160,6 @@
 						<p>22&deg;C</p>
 					</div>
 				</div>
-
 			</div>
 		</div>
 
@@ -170,15 +167,15 @@
 
 		<div class="city">
 			<div class="city-header">
-				<p>Office Kharkiv </p>
+				<p>Office Lviv </p>
 				<div class="content">
 					<div>
 						<img src="images/yel-energy-s.png" alt="electric yellow">
 						<img src="images/wifi-yellow-s.png" alt="wifi yellow">
 					</div>
 					<p>24&deg;C</p>
-					<a href="#"></a>
-				</div>	
+					<a class="href_toggle" href="#"></a>
+				</div>
 				<a href="#"></a>
 			</div>
 			<div class="bigcontent">
@@ -196,7 +193,7 @@
 							<h3>Power on city</h3>
 							<p>from 10:12 01-12-2022</p>
 						</div>
-					</div>	
+					</div>
 				</div>
 				<p>Temperature scales</p>
 				<div class="temp-img">
@@ -213,29 +210,18 @@
 						<p>22&deg;C</p>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</main>
 
-
-	<script>
-var cit = document.getElementsByClassName("city");
+<script>
+var city = document.getElementsByClassName("city");
+var href_toggle = document.getElementsByClassName("href_toggle");
 var i;
 
-for (i = 0; i < cit.length; i++) {
-  cit[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var bigcontent = previousElementSibling;
-    if (bigcontent.style.display === "block") {
-      bigcontent.style.display = "none";
-    } else {
-      bigcontent.style.display = "block";
-    }
-  });
-}
+function setClass(a) { city[a].classList.toggle("active"); return false; }
+
+for (i = 0; i < href_toggle.length; i++) { href_toggle[i].addEventListener("click", setClass.bind(null, i)); }
 </script>
-
-
 </body>
 </html>
