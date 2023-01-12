@@ -154,11 +154,6 @@ main>div{
 	margin-left: 20px;
 }
 
-.elect-m>img{
-	box-shadow: 5px 5px 10px grey inset;
-    border-radius: 29%;
-}
-
 .big-img>div>div p{
 	font-size: 14px;
 	color: grey;
