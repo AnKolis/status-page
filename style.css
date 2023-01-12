@@ -1,0 +1,374 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin:  0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+ol, ul {
+	list-style: none; 
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body {
+	text-align: center;
+	font-family:'Open Sans', sans-serif;
+}
+
+header{
+	margin: 20px auto;
+}
+
+h1{
+	font-size: 40px;
+	font-weight: 600;
+}
+
+main{
+	margin: 60px auto;
+}
+
+main>div{
+	width: 80%;
+	height: auto;
+	border: 2px solid #62bb46;
+	border-radius: 10px;
+	margin: 0 auto 12px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-weight: 700;
+	font-size: 20px;
+	flex-wrap: wrap;
+}
+
+.city-header{
+	display: flex;
+	justify-content: space-between;
+}
+
+.city-header p{
+	padding: 20px;
+}
+
+.bigcontent{
+	display: none;
+}
+
+.active .bigcontent{
+	display: block;
+	/*animation: bigpic 2s linear 2 none;*/	
+}
+
+/*@keyframes bigpic {
+	from {height: 0; }
+
+  	to {height:100% ; }
+}*/
+
+.active .content>div,
+.active .content>p,
+.active .city-header>a
+{
+	display: none;
+}
+
+.active .content>a{
+	background: url(images/css_sprites.png) -65px -0;
+}
+
+.content{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+} 
+
+.content>div img{
+	margin-left: 20px;
+}
+
+.content>p{
+	width: 62px;
+}
+
+.active{
+	display: block;
+	width: 80%;
+	height: auto;
+	border: 2px solid #62bb46;
+	border-radius: 10px;
+	margin: 0 auto 12px;
+	font-weight: 700;
+	font-size: 20px;	
+}
+
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	flex-direction: row-reverse;
+}
+
+.header>p{
+	margin-left: 30px;
+}
+
+.big-img{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	margin: 50px 0 50px;
+}
+
+.big-img>div{
+	display: flex;
+ 	text-align: left;
+ 	width: 50%;
+}
+
+.big-img>div>div{
+	padding: 30px 0 0 30px ;
+	font-size: 18px;
+}
+
+.elect-m{
+	margin-left: 20px;
+}
+
+.elect-m>img{
+	box-shadow: 5px 5px 10px grey inset;
+    border-radius: 29%;
+}
+
+.big-img>div>div p{
+	font-size: 14px;
+	color: grey;
+}
+
+.temp-img{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+}
+
+.temp-img>div{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 10px solid orange;
+    background: transparent;
+    margin: 50px 10px;
+    box-shadow: 10px 10px 10px 0 grey inset;
+    text-align: center;
+    font-size: 30px;
+}
+
+.temp-img>div>p{
+	margin-top: 40%;
+}
+
+.header>a{
+	background: url(images/css_sprites.png) -65px -0;
+}
+
+main a{
+	display: block;
+	width: 64px;
+	height: 64px;
+	background: url(images/css_sprites.png) -0 -0;
+}
+
+.city>p{
+	margin-left: 30px;
+	width: 40%;
+	text-align: start;
+}
+
+main>div>div{
+	width:100%;
+}
+
+.city-header>a{
+	background: url(images/css_sprites.png) -0 -0;
+	display: block;
+	width: 64px;
+	height: 64px;
+	display: none;
+}
+
+@media(max-width: 819px){
+	.big-img{
+		    flex-wrap: wrap;
+	}
+	.big-img>div{
+		margin-left: 30px;
+	}
+
+	.active .big-img>div{
+		width: 100%;
+	}
+	.temp-img{
+		flex-wrap: wrap;
+	}
+}
+
+
+
+
+@media(max-width: 767px){
+	.elect-m>img{
+		margin: 0 17px;
+	}
+	.active .big-img>div{
+		margin: 0 0 20px 30px;
+	}
+	.big-img>div>div{
+		padding: 30px 0 0 8px;
+		width: 100%;
+	}
+	main>div{
+		flex-wrap: wrap;
+	}
+	.active main a{
+	display: none;
+	}
+	.city-header{
+		position: relative;
+	}
+
+	.city>p{
+		margin: 20px 0 0 20px;
+    	width: 100%;
+	}
+	.content{
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		position: relative;	
+	}
+	
+	.content>p{
+    	text-align: left;
+    	margin: 0px 30px 0 0px
+	}
+	.active a{
+		display: block;
+		position: relative;
+	}
+}
+
+
+
+
+
+@media(max-width: 645px){
+	main a{
+		display: none;
+	}
+	.city-header{
+		padding-bottom: 70px;
+		flex-direction: column;
+    	align-items: center;
+	}
+
+	.active .city-header{
+		padding: 0;
+		flex-direction: column-reverse;
+	}
+
+
+	.city-header>a{
+		display: block;
+    	position: absolute;
+    	bottom: 0;
+    	left: 50%;
+    	margin-left: -32px;
+	}
+	.content>p{
+		margin: 0;
+	}
+}
+
+
+@media(max-width: 565px){
+	.active .city-header{
+	   justify-content: center;
+       flex-wrap: wrap;
+       padding:70px 0 0 0;
+	}
+	.active .content{
+		display: none;
+	}
+	.active .city-header>a{
+		display: block;
+		top: 0;
+		background: url(images/css_sprites.png) -64px -0;
+	}
+
+	.active .big-img>div{
+		text-align: center;
+		align-items: center;
+    	flex-direction: column;
+	}
+
+}
+
+
+
+
+@media(max-width: 424px){
+	.big-img {
+		justify-content: center;
+	}
+	main a{
+		position: relative;
+		margin-left: 40%;
+		background: url(images/css_sprites.png) -0 -0;
+	}
+}
+
+
+
+
+@media(max-width: 419px){
+	.header{
+		flex-direction: row;
+		flex-wrap: wrap;		
+	}
+	.header p{
+		width: 100%;
+		margin: 0;
+	}
+}
+
+
+
+
+@media(max-width: 384px){
+	.content {
+		flex-wrap: nowrap;
+	}
+
+	.content>div{
+		display: flex;
+	}
+}
