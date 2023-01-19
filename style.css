@@ -62,6 +62,7 @@ main>div{
 .city-header{
 	display: flex;
 	justify-content: space-between;
+	position: relative;
 }
 
 .city-header p{
@@ -83,14 +84,25 @@ main>div{
   	to {height:100% ; }
 }*/
 
-.active .content>div,
-.active .content>p,
-.active .city-header>a
+.active .content
 {
 	display: none;
 }
 
-.active .content>a{
+
+.city-header>a{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: block;
+	background: url(images/css_sprites.png) -0 -0;
+	display: block;
+	width: 64px;
+	height: 64px;
+}
+
+
+.active .city-header>a{
 	background: url(images/css_sprites.png) -65px -0;
 }
 
@@ -98,10 +110,12 @@ main>div{
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	padding-right: 80px;
 } 
 
-.content>div img{
+.content> img{
 	margin-left: 20px;
+	display: block;
 }
 
 .content>p{
@@ -133,7 +147,7 @@ main>div{
 
 .big-img{
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-around;
 	align-items: center;
 	width: 100%;
 	margin: 50px 0 50px;
@@ -142,7 +156,6 @@ main>div{
 .big-img>div{
 	display: flex;
  	text-align: left;
- 	width: 50%;
 }
 
 .big-img>div>div{
@@ -212,13 +225,7 @@ main>div>div{
 	width:100%;
 }
 
-.city-header>a{
-	background: url(images/css_sprites.png) -0 -0;
-	display: block;
-	width: 64px;
-	height: 64px;
-	display: none;
-}
+
 
 @media(max-width: 819px){
 	.big-img{
@@ -295,10 +302,13 @@ main>div>div{
 	}
 
 	.active .city-header{
-		padding: 0;
+		padding: 70px 0 0;
 		flex-direction: column-reverse;
 	}
 
+	.active .city-header>a{
+		top: 0;
+	}
 
 	.city-header>a{
 		display: block;
@@ -309,6 +319,10 @@ main>div>div{
 	}
 	.content>p{
 		margin: 0;
+	}
+
+	.content{
+		padding: 0;
 	}
 }
 
