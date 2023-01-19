@@ -94,11 +94,11 @@ main>div{
 
   }
 
-  @keyframes width-l-r{
+  /*@keyframes width-l-r{
   	from {width: 50%; }
 
   	to {width:100%; }
-  }
+  }*/
 
 .active .content
 {
