@@ -34,6 +34,15 @@ body {
 
 header{
 	margin: 20px auto;
+	animation: Header 0.5s linear 1 normal none;
+}
+
+@keyframes Header {
+
+  0% {transform: translateY(-100%); }
+
+  100% { transform: none; }
+
 }
 
 h1{
@@ -43,6 +52,15 @@ h1{
 
 main{
 	margin: 60px auto;
+	animation: main 1.5s linear 1 normal none;
+}
+
+@keyframes main {
+
+  0% {transform: translate(-100%);}
+
+  100% { transform: none; }
+
 }
 
 main>div{
